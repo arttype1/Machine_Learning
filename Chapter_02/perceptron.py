@@ -50,7 +50,7 @@ class Perceptron(object):
         self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + X.shape[1])
         self.errors_ = []
 
-        for _in range(self.n_iter):
+        for _ in range(self.n_iter):
             errors = 0
             for xi, target in zip(X,y):
                 update = self.eta * (target - self.predict(xi))
