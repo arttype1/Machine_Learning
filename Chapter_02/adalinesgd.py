@@ -53,9 +53,9 @@ class AdalineSGD(object):
         self.cost_ = []
         for i in range(self.n_iter):
             if self.shuffle:
-                X, y = self_shuffle(X, y)
+                X, y = self._shuffle(X, y)
             cost = []
-            for xi in zip(X, y):
+            for xi, target in zip(X, y):
                 cost.append(self._update_weights(xi, target))
             avg_cost = sum(cost) / len(y)
             self.cost_.append(avg_cost)
