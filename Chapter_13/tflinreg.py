@@ -7,7 +7,7 @@ with warnings.catch_warnings():
     warnings.filterwarnings("ignore",category=FutureWarning)
     import tensorflow as tf
 
-class YfLinreg(object):
+class TfLinreg(object):
     def __init__(self, x_dim, learning_rate=0.01, random_seed=None):
         self.x_dim = x_dim
         self.learning_rate = learning_rate
